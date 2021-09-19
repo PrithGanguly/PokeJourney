@@ -1,0 +1,1 @@
+Pokemon was a key part of my childhood. And now it's almost 25 years old, I grew up watching it and playing games of the franchise. Still now i enjoy seeing references to it, so this is a website of how my childhood Pokemon Journey went.
