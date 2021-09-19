@@ -1,0 +1,407 @@
+@font-face {
+	font-family: 'luna';
+	src: url(./font/Luna.ttf);
+}
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "luna";
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header h1 span{
+    color: #eaa023;
+}
+
+header .poke{
+    padding: 30px 1000px 0px 0px;
+}
+header .poke button{
+    outline: none;
+    padding: 8px 26px;
+    font-size: 20px;
+    font-weight: 400;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.1),rgba(255,255,255,0.2));
+    border-radius: 20px;
+    border-color: white;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    font-family: "luna"
+}
+header .poke button:hover{
+    border-color: white;
+    background-color: #fff;
+    color: #eaa023;
+}
+header .button{
+    padding: 300px 0px 0px 0px
+}
+header .button button{
+    outline: none;
+    padding: 8px 26px;
+    font-size: 30px;
+    font-weight: 400;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.1),rgba(255,255,255,0.2));
+    border-radius: 30px;
+    border-color: white;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    font-family: "luna"
+  }
+
+header .button button:hover{
+    border-color: white;
+    background-color: #fff;
+    color: black;
+  }
+header,
+header:before {
+    background: 50% 50% / cover;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(hero.png);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+.container {
+    z-index: 2;
+    position: absolute;
+    top: 100vh;
+    background: #780206;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    color: white;
+    background-color: #24292d;
+	min-height: 100vh;
+    min-width: 100vh;
+	padding: 100px 200px 0 200px;
+}
+.container h2{
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+.container h5{
+    font-size: 20px;
+    color: wheat;
+    padding-bottom: 20px;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #eaa023;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 22px;
+	color: #eaa023;
+	margin:8px 0 15px;
+}
+.timeline-content{
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+	 inset -5px -5px 15px rgba(255,255,255,0.1),
+	 5px 5px 15px rgba(0,0,0,0.3),
+	 -5px -5px 15px rgba(255,255,255,0.1);
+    background-size: cover;
+    align-items: center;
+	padding: 20px;
+	border-radius: 5px;
+    overflow: hidden;
+    
+
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #c8c8c8;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+.timeline-content img{
+    height:120px;
+    padding: 30px;
+    transition: transform .5s ease;
+}
+.timeline-content img:hover{
+    transform: scale(1.5);
+}
+.container .para{
+    position: relative;
+    margin-top: 10rem;
+    padding: 2rem 4rem 2rem 4rem;
+    border-left: 2px solid white;
+    border-bottom: 3px solid white ;
+    margin-bottom: 5rem;
+}
+.container p{
+    margin: 0;
+    padding: 0;
+    font-weight: 10;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.container p span{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container .media-icons{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.container .media-icons a{
+    color: white;
+    font-size: 32px;
+    margin: 0 12px;
+}
+.container .media-icons a:hover{
+    color: #eaa023;
+}
+.container .media-icons p{
+    padding-top: 2rem;
+    color: white;
+    font-size: 25px;
+    margin: 0 12px;
+    line-height: 3rem;
+}
+/* responsive */
+@media(max-width: 767px){
+    header h1 {
+        top: 40%;
+        left: 50%;
+    }
+    header .poke{
+        padding: 30px 0px 0px 0px;
+    }
+    .container {
+        padding: 150px 50px 150px 50px;
+    }
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+    .timeline-content{
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .container .para p{
+        font-size: 0.8rem;
+    }
+}
+@media(max-width: 690px){
+    .container .para{
+        max-width: 500px;
+        padding: 2rem 2rem;
+    }  
+    .container .media-icons{
+        width:min-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        
+    }
+    .container .media-icons a{
+        color: white;
+        font-size: 32px;
+        margin: 0 12px;
+    }
+    .container .media-icons p{
+        font-size: 30px;
+        padding-bottom: 1rem;
+    }
+}
+@media(max-width: 600px){
+    .container .para{
+        max-width: 420px;
+        padding: 2rem 2rem;
+    }  
+ 
+    .container .para p{
+        font-size: 0.7rem;
+    }
+    .container .media-icons{
+        width:min-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        
+    }
+    .container .media-icons a{
+        color: white;
+        font-size: 32px;
+        margin: 0 12px;
+    }
+    .container .media-icons p{
+        font-size: 30px;
+        padding-bottom: 1rem;
+    }
+}
+@media(max-width: 500px){
+    .container .para{
+        max-width: 350px;
+        padding: 2rem 2rem;
+    }  
+    .timeline-content{
+        display: inline-grid;
+        grid-template-columns: 1fr;
+        
+    }
+}
+@media(max-width: 420px){
+    .container h2{
+        font-size: 25px;
+    }
+    .container h5{
+        font-size: 15px;
+    }
+    .container .para{
+        max-width: 280px;
+        padding: 2rem 2rem;
+    }  
+    .container .media-icons{
+        width:min-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .container .media-icons a{
+        color: white;
+        font-size: 28px;
+        margin: 0 12px;
+    }
+    .container .media-icons p{
+        font-size: 26px;
+        padding-bottom: 1rem;
+    }
+}
+
+@media(max-width: 390px){
+    .container .para{
+        max-width: 200px;
+        padding: 2rem 2rem;
+    }  
+    .container .para p{
+        font-size: 0.7rem;
+    }
+    .container .media-icons{
+        width:min-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        
+    }
+    .container .media-icons a{
+        color: white;
+        font-size: 22px;
+        margin: 0 12px;
+    }
+    .container .media-icons p{
+        font-size: 20px;
+        padding-bottom: 1rem;
+    }
+}
+
